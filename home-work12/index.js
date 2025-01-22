@@ -2,20 +2,24 @@ import express from "express";
 import mongoose from "mongoose";
 import Employee from "./Employee.js";
 
+mongoose.connect("mongodb+srv://elipentser:NlhU0JQdBbWSOR27@svcollege.75omg.mongodb.net/crud", ()=>{
+     console.log("connected to db");
+});
+
 const app=express();
 
+//middleware
+app.use(express.json());
 
-mongoose.connect(process.env.CONNECTION_STRING);
-const employee= new Employee({name:"rafi pentser",age:54});
+app.get("/", (req,res)=>{
+    res.json("msg","Hello from server");
 
-employee.save()
-.then(()=>{
-    console.log(employee._doc);
-    
 })
-.catch((err)=>{
-    console.log(err.message)
-})
+
+
+
+
+/* test
 const employee1= new Employee({name:"eli pentser",age:54});
 employee1.save()
 .then(()=>{
@@ -25,10 +29,7 @@ employee1.save()
 .catch((err)=>{
    console.log(err.message)
 })
-
-
-
-
+   */
 // Employee.find({}).then ((doc)=>{
 // console.log(doc[0].toObject())
 // });
