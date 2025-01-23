@@ -7,16 +7,16 @@ import {deleteEmployeOverAge} from "../data/crud.js"
 const router= express.Router();
 
 router.post("/",validate ,(req,res)=>{
-  const {upAge} = req.value.body
+ 
 
-  deleteEmployeOverAge(Employee,upAge);
+  deleteEmployeOverAge(Employee,req.value.body);
 
   })
 
   function validate(req,res,next) {
     // Define a validation schema for the request body
 const schema = Joi.object({
-    upAge: Joi.number().min(0).max(135).required(),
+    upAge: Joi.number().min(0).max(135).required()
   });
 
   const result = schema.validate(req.body);

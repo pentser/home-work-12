@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Add employee</title>
-    <script defer src="js/index.js"></script> 
-    <script defer src="js/delete.js"></script> 
-    <script defer src="js/update.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <form id="form_add" action="./js/index.js" method="get">
+    <form id="form_add" action="./js/index.js" method="post">
         <fieldset>
             <legend>Add Employee</legend>
         <div class="input-form">
@@ -38,7 +35,7 @@
     <span>* error: please enter valid data [department]</span> -->     
  </div>
   
- <form id="form_delete" action="./js/delete.js" method="get">
+ <form id="form_delete" action="./js/delete.js" method="post">
     <fieldset>
         <legend>delete age over</legend>
     <div class="input-form">
@@ -53,7 +50,7 @@
     <span>* error: please enter valid data [department]</span> -->     
  </div>
 
- <form id="form_change" action="./js/update.js" method="get">
+ <form id="form_change" action="./js/update.js" method="post">
     <fieldset>
         <legend>change department</legend>
     <div class="input-form">
@@ -71,6 +68,11 @@
     <!-- <span>* error: please enter valid data [name]</span>
     <span>* error: please enter valid data [department]</span> -->     
  </div>
+
+ 
+ <script src="js/index.js"></script> 
+ <script src="js/delete.js"></script> 
+ <script src="js/update.js"></script> 
 
  </body>
  

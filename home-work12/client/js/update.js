@@ -1,6 +1,6 @@
-const $formAdd= window.document.querySelector("#form_change");
+const $formUpdate= window.document.querySelector("#form_change");
 
-$formAdd.addEventListener("submit",async(e)=>{
+    $formUpdate.addEventListener("submit",async(e)=>{
     e.preventDefault();
     console.log(e)
 
@@ -21,7 +21,7 @@ $formAdd.addEventListener("submit",async(e)=>{
         isError=true;
         
     }
-    if(department.length<2) {
+    if(newDepartmentName.length<2) {
         
         const newSpan=document.createElement("span");
         newSpan.textContent=`* error: please enter valid string >2 new department string length:[${+newDepartmentName}]`;
@@ -42,7 +42,7 @@ $formAdd.addEventListener("submit",async(e)=>{
             console.log(err.message);
         }
     }
-    
-
-    
 })
+
+
+
