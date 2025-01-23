@@ -4,7 +4,6 @@ $formAdd.addEventListener("submit",async(e)=>{
     e.preventDefault();
     console.log(e)
 
-    // const $formAdd= document.querySelector("#form_add");
     const $error= document.querySelector("#errAddMessage")
     const name=e.target[1].value;
     const department=e.target[2].value;
@@ -50,10 +49,51 @@ $formAdd.addEventListener("submit",async(e)=>{
     }
 
     // if all valid data
-    if(isError=false) {
+    if(isError===false) {
         try {
 
-            await axios.post("http://localhost:3000",{name,department,age,salary})
+            await axios.post("http://localhost:3000/add-employee",{name,department,age,salary})
+        }
+
+        catch (err) {
+            console.log(err.message);
+        }
+    }
+    
+    
+
+
+
+    
+})
+const $formDelete= window.document.querySelector("#form_delete");
+
+$formDelete.addEventListener("submit",async(e)=>{
+    e.preventDefault();
+    console.log(e)
+
+    // const $formAdd= document.querySelector("#form_add");
+    const $error= document.querySelector("#errDeleteMessage")
+    const age =e.target[1].value;
+    
+    $error.innerHTML="";
+    isError=false;
+
+    
+    if(age<=0 || age>135 ) {
+        const newSpan=document.createElement("span");
+        newSpan.textContent=`* error: please enter valid age 0-135`;
+        $error.appendChild(newSpan);
+        isError=true;
+        
+    }
+    
+   
+    // if  valid data
+    if(isError===false) {
+        try {
+
+            await axios.post("http://localhost:3000/delete-employee-over",{age})
         }
 
         catch (err) {
