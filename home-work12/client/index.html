@@ -5,26 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Add employee</title>
-    <script defer src="js/index.js"></script>
+    <script defer src="js/index.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <form action="./js/index.js" method="get"></form>
+    <form id="form_add" action="./js/index.js" method="get">
+        <fieldset>
+            <legend>Add Employee</legend>
+        <div class="input-form">
+            <label for="fullname">Name:</label>
+            <input name="fullname" id="fullname" type="text">
+        </div>  
+        <div class="input-form">
+            <label for="department">Department:</label>
+            <input name="department" id="department" type="text">
+        </div>  
+        <div class="input-form">
+            <label for="department">Age</label>
+            <input name="age" id="age" type="number">
+        </div>  
+        <div class="input-form">
+            <label for="fullname">Salary</label>
+            <input name="salary" id="salary" type="number">
+        </div>  
+        <button id="submitAddEmployee" type="submit">Submit</button>  
+ </fieldset>
+ </form>
+ <div id="errAddMessage">
+    <!-- <span>* error: please enter valid data [name]</span>
+    <span>* error: please enter valid data [department]</span> -->     
+ </div>
+  
+ <form id="formDelete" action="./js/GetFromAge.js" method="get">
+    <fieldset>
+        <legend>delete up to age</legend>
+    <div class="input-form">
+        <label for="upAge">age:</label>
+        <input name="upAge" id="upAge" type="number">
+    </div>  
+    <button id="submitDeleteFromAge" type="submit">Submit</button>
+    </fieldset>
+</form>
+<div id="errDeleteMessage">
+    <!-- <span>* error: please enter valid data [name]</span>
+    <span>* error: please enter valid data [department]</span> -->     
+ </div>
+
+ <form id="form_change" action="./js/changeDepartment.js" method="get">
+    <fieldset>
+        <legend>change department</legend>
     <div class="input-form">
         <label for="fullname">Name:</label>
         <input name="fullname" id="fullname" type="text">
     </div>  
-    <div class="input-form">
-        <label for="department">Department:</label>
-        <input name="department" id="department" type="text">
-    </div>  
-    <div class="input-form">
-        <label for="department">Age</label>
-        <input name="age" id="age" type="number">
-    </div>  
-    <div class="input-form">
-        <label for="fullname">Salary</label>
-        <input name="salary" id="salary" type="number">
-    </div>  
-    <button id="submit" type="submit">Submit</button>
-</body>
+    <button id="submitChange" type="submit">Submit</button>
+    </fieldset>
+</form>
+<div id="errChangeMessage">
+    <!-- <span>* error: please enter valid data [name]</span>
+    <span>* error: please enter valid data [department]</span> -->     
+ </div>
+
+ </body>
+ 
 </html>

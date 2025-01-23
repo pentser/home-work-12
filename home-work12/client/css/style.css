@@ -1,0 +1,10 @@
+#errAddMessage,#errDeleteMessage,#errChangeMessage {
+    color: red;
+    /* visibility: hidden; */
+}
+
+span{
+    display:block;
+}
+
+
