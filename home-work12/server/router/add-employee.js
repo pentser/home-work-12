@@ -1,23 +1,14 @@
 import express from "express";
 import Employee from "../model/Employee.js";
+import {insertEmployee} from "../data/crud.js";
 import Joi from "joi";
 
-const router= express.router();
+const router= express.Router();
 
-app.post("/",validate ,(req,res)=>{
-    
-    // add employee to database
-  const employee= new Employee(req.value.body);
-  employee.save()
-  .then(()=>{
-      console.log(employee._doc);
-  
-  })
-  .catch((err)=>{
-     console.log(err.message)
-  })
-  
-  
+router.post("/",validate ,(req,res)=>{
+
+  insertEmployee(Employee,req.value.body);
+
   })
 
   function validate(req,res,next) {

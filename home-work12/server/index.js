@@ -1,12 +1,13 @@
 import express from "express";
-import Employee from "./model/Employee.js";
 import cors from "cors";
 import connectDB from "./data/config.js";
+
+
+
 
 import routerAdd from "./router/add-employee.js";
 import routerDelete from "./router/delete-employee.js";
 import routerUpdate from "./router/apdate-employee.js";
-
 
 
 connectDB();
