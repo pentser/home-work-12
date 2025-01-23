@@ -36,7 +36,7 @@
     <span>* error: please enter valid data [department]</span> -->     
  </div>
   
- <form id="formDelete" action="./js/GetFromAge.js" method="get">
+ <form id="form_delete" action="./js/delete.js" method="get">
     <fieldset>
         <legend>delete age over</legend>
     <div class="input-form">
@@ -51,12 +51,16 @@
     <span>* error: please enter valid data [department]</span> -->     
  </div>
 
- <form id="form_change" action="./js/changeDepartment.js" method="get">
+ <form id="form_change" action="./js/update.js" method="get">
     <fieldset>
         <legend>change department</legend>
     <div class="input-form">
-        <label for="fullname">Name:</label>
-        <input name="fullname" id="fullname" type="text">
+        <label for="oldname">Current Department Name:</label>
+        <input name="oldname" id="oldname" type="text">
+    </div>
+    <div class="input-form">
+        <label for="newname">New Department Name:</label>
+        <input name="newname" id="newname" type="text">
     </div>  
     <button id="submitChange" type="submit">Submit</button>
     </fieldset>
