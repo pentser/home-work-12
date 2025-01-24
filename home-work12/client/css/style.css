@@ -7,4 +7,45 @@ span{
     display:block;
 }
 
+form, #errAddMessage,#errDeleteMessage,#errChangeMessage {
+    width:450px;
+    margin: 0 auto;
+
+    
+}
+
+legend {
+    color:#3636b7;
+    font-family: tahoma;
+    
+}
+
+.input-form {
+    font-family: tahoma;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+      
+}
+
+label {
+    padding-bottom: 7px;
+}
+
+button {
+    border:0;
+    background-color: #3636b7;
+    color:white;
+    padding: 5px 15px 5px 15px;
+    border-radius: 7px;
+
+}
+
+button:hover {
+
+    background-color: #0e0ee9;
+
+}
+
 

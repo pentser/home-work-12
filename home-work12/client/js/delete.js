@@ -13,7 +13,7 @@ $formDelete.addEventListener("submit",async(e)=>{
     isError=false;
 
     
-    if(parseInt(age)<=0 || parseInt(age)>135 ) {
+    if(parseInt(age)<=0 || parseInt(age)>135 || age=="" ) {
         const newSpan=document.createElement("span");
         newSpan.textContent=`* error: please enter valid age 0-135`;
         $error.appendChild(newSpan);
