@@ -9,7 +9,7 @@ const router= express.Router();
 router.post("/",validate ,(req,res)=>{
  
 
-  deleteEmployeOverAge(Employee,req.value.body);
+  deleteEmployeOverAge(Employee,req.value.body.appAge);
 
   })
 

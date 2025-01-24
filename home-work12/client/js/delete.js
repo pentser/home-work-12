@@ -13,7 +13,7 @@ $formDelete.addEventListener("submit",async(e)=>{
     isError=false;
 
     
-    if(age<=0 || age>135 ) {
+    if(parseInt(age)<=0 || parseInt(age)>135 ) {
         const newSpan=document.createElement("span");
         newSpan.textContent=`* error: please enter valid age 0-135`;
         $error.appendChild(newSpan);
@@ -26,7 +26,7 @@ $formDelete.addEventListener("submit",async(e)=>{
     if(isError===false) {
         try {
 
-            await axios.post("http://localhost:3000/delete-employee",{age})
+            await axios.post("http://localhost:3000/delete-employee",{upAge:parseInt(age)})
         }
 
         catch (err) {
