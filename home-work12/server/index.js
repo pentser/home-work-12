@@ -7,7 +7,7 @@ import connectDB from "./data/config.js";
 
 import routerAdd from "./router/add-employee.js";
 import routerDelete from "./router/delete-employee.js";
-import routerUpdate from "./router/apdate-employee.js";
+import routerUpdate from "./router/update-employee.js";
 
 
 connectDB();
@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use("/add-employee",routerAdd);
 app.use("/delete-employee",routerDelete);
-app.use("/apdate-employee",routerUpdate);
+app.use("/update-employee",routerUpdate);
 
 app.get("/",(req,res)=>{
     res.json({msg:"wellcome..."})
