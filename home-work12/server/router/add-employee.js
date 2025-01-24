@@ -8,6 +8,7 @@ const router= express.Router();
 router.post("/",validate ,(req,res)=>{
 
   insertEmployee(Employee,req.value.body);
+  
 
   })
 

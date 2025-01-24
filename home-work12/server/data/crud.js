@@ -33,7 +33,6 @@ export async function replaceEmployeeDepartment(model,oldDepartment,newDepartmen
     try {
         const employee=await model.replaceOne(oldDepartment, newDepartment) 
         console.log(employee);
-
     }
        
     catch(error) {

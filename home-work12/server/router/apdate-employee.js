@@ -9,7 +9,6 @@ const router= express.Router();
 router.post("/",validate ,(req,res)=>{
   const {oldname,newname} = req.value.body
   replaceEmployeeDepartment(Employee,oldname,newname)
-
   })
 
   function validate(req,res,next) {

@@ -6,7 +6,7 @@ $formDelete.addEventListener("submit",async(e)=>{
     console.log(e)
 
     const $error= document.querySelector("#errDeleteMessage")
-    const age =parseInt(e.target[1].value);
+    const age =e.target[1].value;
 
     
     $error.innerHTML="";

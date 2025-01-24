@@ -20,6 +20,7 @@ app.use(cors({
     origin:"*"
 }))
 app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 app.use("/add-employee",routerAdd);
 app.use("/delete-employee",routerDelete);
 app.use("/apdate-employee",routerUpdate);
