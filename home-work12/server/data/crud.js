@@ -31,7 +31,7 @@ employee.save()
 }
 export async function replaceEmployeeDepartment(model,oldDepartment,newDepartment) {
     try {
-        const employee=await model.replaceOne({name:oldDepartment}, {name:newDepartment}) 
+        const employee=await model.replaceOne({department:oldDepartment}, {department:newDepartment}) 
         console.log(employee);
     }
        
