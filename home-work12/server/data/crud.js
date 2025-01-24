@@ -31,8 +31,12 @@ employee.save()
 }
 export async function replaceEmployeeDepartment(model,oldDepartment,newDepartment) {
     try {
-        const employee=await model.replaceOne({department:oldDepartment}, {department:newDepartment}) 
-        console.log(employee);
+       
+       const result=  await model.updateMany(
+            { department: oldDepartment },
+            { $set: { department: newDepartment } });
+
+        console.log(result.modifiedCount);
     }
        
     catch(error) {
