@@ -35,7 +35,7 @@ const $formUpdate= window.document.querySelector("#form_change");
     if(isError===false) {
         try {
 
-            await axios.post("http://localhost:3000/update-employee",{oldDepartmentName,newDepartmentName})
+            await axios.post("http://localhost:3000/update-employee",{oldname:oldDepartmentName,newname:newDepartmentName})
         }
 
         catch (err) {
